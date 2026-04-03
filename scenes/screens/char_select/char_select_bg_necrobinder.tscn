@@ -1,0 +1,290 @@
+[gd_scene load_steps=19 format=3 uid="uid://crno8o3bdv4w6"]
+
+[ext_resource type="SpineSkeletonDataResource" uid="uid://bvsubk4pagh72" path="res://animations/character_select/necrobinder/characterselect_necrobinder_skel_data.tres" id="1_8aoea"]
+[ext_resource type="Shader" uid="uid://ho3y66vpmnro" path="res://shaders/vfx/vfx_water_reflection.gdshader" id="1_oe7nh"]
+[ext_resource type="Texture2D" uid="uid://bxnkqltdteply" path="res://images/rooms/underdocks/underdocks_00.png" id="2_7ov07"]
+[ext_resource type="Texture2D" uid="uid://8dye426ar1u" path="res://animations/character_select/necrobinder/character_select_necrobinder_bg.png" id="3_lrlla"]
+[ext_resource type="Texture2D" uid="uid://cqq6dv2saykf" path="res://images/vfx/short_grain_rice_particle.png" id="4_lrlla"]
+[ext_resource type="Script" uid="uid://cu1ifnlpb1es4" path="res://src/Core/Nodes/Animation/NSpineAutoPlayer.cs" id="14_lrlla"]
+[ext_resource type="Texture2D" uid="uid://b2ewtld76hr6c" path="res://images/vfx/light.png" id="15_lrlla"]
+[ext_resource type="Script" uid="uid://pws7v6mmnbj4" path="res://scenes/backgrounds/little_light_script.gd" id="16_wa7mi"]
+[ext_resource type="Material" uid="uid://c4ycqv0gdxvmr" path="res://themes/canvas_item_material_additive_shared.tres" id="shared_additive_mat"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4pq5v"]
+noise_type = 0
+frequency = 0.0259
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7ov07"]
+width = 50
+height = 50
+noise = SubResource("FastNoiseLite_4pq5v")
+seamless = true
+seamless_blend_skirt = 0.093
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wa7mi"]
+shader = ExtResource("1_oe7nh")
+shader_parameter/noise = SubResource("NoiseTexture2D_7ov07")
+shader_parameter/mask = ExtResource("2_7ov07")
+shader_parameter/speed = 0.023
+shader_parameter/strength = 0.1
+
+[sub_resource type="Gradient" id="Gradient_i5p72"]
+offsets = PackedFloat32Array(0, 0.178337, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yuquq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_58mr1"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ou856"]
+
+[sub_resource type="Curve" id="Curve_v6omp"]
+_data = [Vector2(0, 0.417635), 0.0, 0.0, 0, 0, Vector2(0.502521, 0.507939), 0.0, 0.0, 0, 0, Vector2(1, 0.423164), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_1v5y4"]
+offsets = PackedFloat32Array(0, 0.607407, 0.994413)
+colors = PackedColorArray(0.427493, 0.427493, 0.427493, 1, 1, 1, 1, 1, 0.427451, 0.427451, 0.427451, 1)
+
+[node name="SilentBg" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -521.0
+offset_right = 1600.0
+offset_bottom = 679.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1280, 600)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_wa7mi")
+layout_mode = 0
+offset_left = -437.0
+offset_top = -107.0
+offset_right = 2197.0
+offset_bottom = 1129.0
+texture = ExtResource("3_lrlla")
+expand_mode = 2
+
+[node name="ash2" type="CPUParticles2D" parent="."]
+position = Vector2(2054, 1163)
+amount = 20
+texture = ExtResource("4_lrlla")
+lifetime = 15.0
+preprocess = 15.0
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(250, 250)
+gravity = Vector2(-50, -75)
+orbit_velocity_max = 0.03
+radial_accel_max = 1.0
+angle_max = 353.6
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(0.47812212, 0.7746372, 0.5047827, 1)
+color_ramp = SubResource("Gradient_i5p72")
+
+[node name="ash3" type="CPUParticles2D" parent="."]
+position = Vector2(2054, 1163)
+amount = 20
+texture = ExtResource("4_lrlla")
+lifetime = 15.0
+preprocess = 15.0
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(250, 250)
+gravity = Vector2(-100, -150)
+orbit_velocity_max = 0.03
+radial_accel_max = 1.0
+angle_max = 353.6
+scale_amount_max = 2.0
+color = Color(0.47843137, 0.7764706, 0.5058824, 1)
+color_ramp = SubResource("Gradient_i5p72")
+
+[node name="SpineSprite" type="SpineSprite" parent="."]
+skeleton_data_res = ExtResource("1_8aoea")
+normal_material = SubResource("CanvasItemMaterial_yuquq")
+multiply_material = SubResource("CanvasItemMaterial_58mr1")
+preview_skin = "default"
+preview_animation = "animation"
+preview_frame = false
+preview_time = 0.0
+position = Vector2(804.785, 1152.115)
+
+[node name="OstyFireSlot" type="SpineSlotNode" parent="SpineSprite"]
+slot_name = "osty_fire_slot"
+show_behind_parent = true
+position = Vector2(2072.469, 1456.3745)
+
+[node name="HeadFireSlot" type="SpineSlotNode" parent="SpineSprite"]
+slot_name = "head_fire_slot"
+show_behind_parent = true
+position = Vector2(3686.6394, 965.22906)
+
+[node name="_SpineMesh2D_148096" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148097" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148098" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148099" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148100" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148101" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148102" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148103" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148104" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148105" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148106" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148107" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148108" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148109" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148110" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148111" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148112" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_148113" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230945" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230946" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230947" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230948" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230949" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230950" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230951" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230952" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230953" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230954" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230955" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230956" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230957" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230958" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230959" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="@SpineMesh2D@230960" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_230961" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="_SpineMesh2D_230962" type="SpineMesh2D" parent="SpineSprite"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ou856")
+
+[node name="NSpineAutoPlayer" type="Node" parent="SpineSprite"]
+script = ExtResource("14_lrlla")
+
+[node name="light_small2" type="CPUParticles2D" parent="."]
+material = ExtResource("shared_additive_mat")
+position = Vector2(239, 31)
+rotation = 3.1032
+amount = 1
+texture = ExtResource("15_lrlla")
+lifetime = 3.0
+local_coords = true
+gravity = Vector2(0, 0)
+scale_amount_min = 12.0
+scale_amount_max = 12.0
+scale_amount_curve = SubResource("Curve_v6omp")
+color = Color(0.50857913, 0.9514491, 0.69976026, 0.4)
+color_ramp = SubResource("Gradient_1v5y4")
+script = ExtResource("16_wa7mi")

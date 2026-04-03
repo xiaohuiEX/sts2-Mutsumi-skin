@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://crxhhew84n0yg"]
+
+[ext_resource type="Script" uid="uid://bdi432hiwyxyu" path="res://src/Core/Nodes/Combat/NCreatureVisuals.cs" id="1_p5sir"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://w061e4iwxkil" path="res://animations/monsters/osty/osty_skel_data.tres" id="2_x0d2e"]
+
+[node name="Osty" type="Node2D"]
+script = ExtResource("1_p5sir")
+metadata/_edit_group_ = true
+
+[node name="Visuals" type="SpineSprite" parent="."]
+skeleton_data_res = ExtResource("2_x0d2e")
+preview_skin = "Default"
+preview_animation = "revive"
+preview_frame = false
+preview_time = 0.0
+unique_name_in_owner = true
+position = Vector2(-19, -23)
+scale = Vector2(0.6, 0.6)
+
+[node name="Flame" type="SpineSlotNode" parent="Visuals"]
+slot_name = "flameattach"
+show_behind_parent = true
+position = Vector2(-73.1536, -529.778)
+rotation = -0.161699
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -204.0
+offset_right = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-15, -109)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -218)

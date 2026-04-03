@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://bssv3yaw1l65i"]
+
+[ext_resource type="Script" uid="uid://dx2vbbc5y7vvn" path="res://src/Core/Nodes/RestSite/NRestSiteCharacter.cs" id="1_dkbwi"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://bxwvk7umu4fv6" path="res://animations/rest_site/necrobinder/rest_site_necrobinder_skel_data.tres" id="2_umdbn"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://djuj28o32bscn" path="res://animations/rest_site/necrobinder/rest_site_osty_skel_data.tres" id="3_usn31"]
+[ext_resource type="PackedScene" uid="uid://bgy88bk44xxvk" path="res://scenes/ui/selection_reticle.tscn" id="14_s8aer"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ysxny"]
+
+[node name="NecrobinderRestSite" type="Node2D"]
+position = Vector2(-2, 42)
+scale = Vector2(0.760006, 0.760006)
+script = ExtResource("1_dkbwi")
+
+[node name="OstyRightAnchor" type="Node2D" parent="."]
+position = Vector2(239.472, -84.2099)
+
+[node name="Necro" type="SpineSprite" parent="."]
+skeleton_data_res = ExtResource("2_umdbn")
+multiply_material = SubResource("CanvasItemMaterial_ysxny")
+preview_skin = "Default"
+preview_animation = "overgrowth_loop"
+preview_frame = false
+preview_time = 0.0
+position = Vector2(124.614, -64.936)
+scale = Vector2(0.76, 0.76)
+
+[node name="Osty" type="SpineSprite" parent="."]
+skeleton_data_res = ExtResource("3_usn31")
+preview_skin = "Default"
+preview_animation = "overgrowth_loop"
+preview_frame = false
+preview_time = 0.0
+position = Vector2(-41.46, 39.745)
+scale = Vector2(2, 2)
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="SelectionReticle" parent="ControlRoot" instance=ExtResource("14_s8aer")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -205.0
+offset_top = -453.0
+offset_right = 242.0
+offset_bottom = 284.0
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -191.0
+offset_top = -446.0
+offset_right = 237.0
+offset_bottom = 280.0
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 127.631
+offset_top = -356.576
+offset_right = 127.631
+offset_bottom = -356.576
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -172.367
+offset_top = -342.103
+offset_right = -172.367
+offset_bottom = -342.103
