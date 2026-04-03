@@ -1,0 +1,265 @@
+
+characterselect_necrobinder.png
+size: 1984,1159
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Mutsumi_arm
+  rotate: true
+  xy: 1778, 804
+  size: 198, 200
+  orig: 198, 200
+  offset: 0, 0
+  index: -1
+Mutsumi_body
+  rotate: false
+  xy: 1741, 571
+  size: 231, 231
+  orig: 402, 580
+  offset: 141, 0
+  index: -1
+Mutsumi_body2
+  rotate: true
+  xy: 1778, 349
+  size: 220, 198
+  orig: 221, 198
+  offset: 1, 0
+  index: -1
+Mutsumi_eye
+  rotate: false
+  xy: 1865, 15
+  size: 85, 70
+  orig: 85, 70
+  offset: 0, 0
+  index: -1
+Mutsumi_face
+  rotate: true
+  xy: 1432, 752
+  size: 227, 307
+  orig: 250, 308
+  offset: 0, 0
+  index: -1
+Mutsumi_hair_a
+  rotate: false
+  xy: 1120, 69
+  size: 304, 361
+  orig: 304, 363
+  offset: 0, 1
+  index: -1
+Mutsumi_hair_b
+  rotate: false
+  xy: 560, 432
+  size: 708, 725
+  orig: 708, 727
+  offset: 0, 0
+  index: -1
+Mutsumi_hair_c
+  rotate: false
+  xy: 1428, 571
+  size: 255, 179
+  orig: 255, 179
+  offset: 0, 0
+  index: -1
+Mutsumi_hair_e
+  rotate: false
+  xy: 1432, 981
+  size: 344, 176
+  orig: 344, 176
+  offset: 0, 0
+  index: -1
+Mutsumi_hair_f
+  rotate: true
+  xy: 1632, 3
+  size: 214, 67
+  orig: 214, 68
+  offset: 0, 1
+  index: -1
+Mutsumi_jm
+  rotate: true
+  xy: 1316, 17
+  size: 50, 114
+  orig: 50, 114
+  offset: 0, 0
+  index: -1
+Mutsumi_leg_L
+  rotate: true
+  xy: 1701, 5
+  size: 212, 75
+  orig: 212, 75
+  offset: 0, 0
+  index: -1
+Mutsumi_leg_R
+  rotate: false
+  xy: 1778, 1004
+  size: 204, 153
+  orig: 204, 160
+  offset: 0, 0
+  index: -1
+Mutsumi_meimao
+  rotate: false
+  xy: 1382, 631
+  size: 20, 85
+  orig: 20, 85
+  offset: 0, 0
+  index: -1
+Mutsumi_yl
+  rotate: false
+  xy: 1755, 234
+  size: 90, 113
+  orig: 90, 113
+  offset: 0, 0
+  index: -1
+Mutsumi_yp
+  rotate: false
+  xy: 1174, 15
+  size: 32, 52
+  orig: 32, 52
+  offset: 0, 0
+  index: -1
+maozi
+  rotate: true
+  xy: 2, 4
+  size: 414, 354
+  orig: 414, 354
+  offset: 0, 0
+  index: -1
+mortis_arm_L
+  rotate: false
+  xy: 1270, 976
+  size: 159, 181
+  orig: 567, 495
+  offset: 153, 0
+  index: -1
+mortis_arm_R
+  rotate: false
+  xy: 1602, 219
+  size: 151, 221
+  orig: 153, 221
+  offset: 1, 0
+  index: -1
+mortis_body
+  rotate: false
+  xy: 1270, 432
+  size: 191, 137
+  orig: 193, 139
+  offset: 1, 1
+  index: -1
+mortis_body_2
+  rotate: false
+  xy: 1463, 442
+  size: 207, 127
+  orig: 207, 127
+  offset: 0, 0
+  index: -1
+mortis_dress_1
+  rotate: true
+  xy: 1778, 87
+  size: 145, 173
+  orig: 145, 173
+  offset: 0, 0
+  index: -1
+mortis_dress_2
+  rotate: false
+  xy: 1270, 592
+  size: 110, 124
+  orig: 111, 124
+  offset: 1, 0
+  index: -1
+mortis_dress_3
+  rotate: true
+  xy: 1432, 2
+  size: 183, 198
+  orig: 184, 225
+  offset: 1, 26
+  index: -1
+mortis_erhuan
+  rotate: true
+  xy: 1120, 4
+  size: 63, 30
+  orig: 63, 30
+  offset: 0, 0
+  index: -1
+mortis_eye_L
+  rotate: true
+  xy: 1778, 13
+  size: 72, 85
+  orig: 111, 85
+  offset: 39, 0
+  index: -1
+mortis_eye_R
+  rotate: true
+  xy: 1672, 488
+  size: 81, 93
+  orig: 89, 93
+  offset: 1, 0
+  index: -1
+mortis_face
+  rotate: true
+  xy: 358, 23
+  size: 395, 300
+  orig: 395, 301
+  offset: 0, 1
+  index: -1
+mortis_hair_a
+  rotate: false
+  xy: 660, 2
+  size: 458, 428
+  orig: 458, 428
+  offset: 0, 0
+  index: -1
+mortis_hair_b
+  rotate: true
+  xy: 2, 420
+  size: 737, 556
+  orig: 789, 557
+  offset: 52, 1
+  index: -1
+mortis_jm_L
+  rotate: false
+  xy: 1208, 16
+  size: 106, 51
+  orig: 106, 51
+  offset: 0, 0
+  index: -1
+mortis_jm_R
+  rotate: true
+  xy: 1685, 632
+  size: 118, 45
+  orig: 118, 45
+  offset: 0, 0
+  index: -1
+mortis_leg_L
+  rotate: true
+  xy: 1270, 718
+  size: 256, 156
+  orig: 256, 170
+  offset: 0, 14
+  index: -1
+mortis_leg_R
+  rotate: true
+  xy: 1426, 187
+  size: 243, 174
+  orig: 243, 240
+  offset: 0, 66
+  index: -1
+mortis_meimao_R
+  rotate: true
+  xy: 1741, 844
+  size: 135, 29
+  orig: 135, 30
+  offset: 0, 0
+  index: -1
+mortis_yp_L
+  rotate: false
+  xy: 358, 8
+  size: 55, 13
+  orig: 55, 13
+  offset: 0, 0
+  index: -1
+mortis_yp_R
+  rotate: true
+  xy: 1152, 5
+  size: 62, 20
+  orig: 62, 20
+  offset: 0, 0
+  index: -1
